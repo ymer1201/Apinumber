@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        h2 {
+            color: #555;
+        }
+        p {
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <h1>API Documentation</h1>
+    <h2>Overview</h2>
+    <p>This API allows you to validate and retrieve information about phone numbers. It provides details such as country code, carrier, and line type.</p>
+
+    <h2>Endpoints</h2>
+    <h3>Validate Phone Number</h3>
+    <p><strong>URL:</strong> https://api.apilayer.com/number_verification/validate?number={phone_number}</p>
+    <p><strong>Method:</strong> GET</p>
+    <p><strong>Parameters:</strong></p>
+    <ul>
+        <li><strong>number</strong> (required): The phone number to validate.</li>
+    </ul>
+
+    <h3>Response Example</h3>
+    <pre>
+    {
+        "valid": true,
+        "number": "+1234567890",
+        "local_format": "1234567890",
+        "international_format": "+1234567890",
+        "country_prefix": "+1",
+        "country_code": "US",
+        "country_name": "United States",
+        "location": "New York",
+        "carrier": "AT&T",
+        "line_type": "mobile"
+    }
+    </pre>
+
+    <h2>Usage</h2>
+    <p>To use this API, you need to obtain an API key from apilayer.com. Include the API key in the request headers as follows:</p>
+    <pre>
+    headers = {
+        "apikey": "YOUR_API_KEY"
+    }
+    </pre>
+
+    <h2>Contact</h2>
+    <p>For any questions or support, please contact support@apilayer.com.</p>
+</body>
+</html>
